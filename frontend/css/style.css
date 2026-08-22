@@ -1,0 +1,1262 @@
+/* =========================================
+   THE WATCHER - MAIN STYLES
+   ========================================= */
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0b1020;
+    color: #f8fafc;
+    min-height: 100vh;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================
+   MAIN APPLICATION
+   ========================================= */
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   SIDEBAR
+   ========================================= */
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background: #0f172a;
+    border-right: 1px solid #1e293b;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px 16px;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+/* ---------- LOGO ---------- */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 10px 12px;
+    margin-bottom: 40px;
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #6366f1, #22d3ee);
+
+    color: white;
+    font-size: 20px;
+}
+
+.logo-text {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: all 0.2s ease;
+}
+
+.nav-item span:first-child {
+    width: 20px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.nav-item:hover {
+    background: #172033;
+    color: #f8fafc;
+}
+
+.nav-item.active {
+    background: linear-gradient(
+        90deg,
+        rgba(99, 102, 241, 0.2),
+        rgba(34, 211, 238, 0.08)
+    );
+
+    color: #ffffff;
+
+    border-left: 3px solid #6366f1;
+}
+
+
+/* ---------- BOTTOM SIDEBAR ---------- */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    border-top: 1px solid #1e293b;
+
+    padding-top: 18px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+.main-content {
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
+    min-height: 100vh;
+
+    padding: 30px 38px;
+}
+
+
+/* =========================================
+   TOP HEADER
+   ========================================= */
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 32px;
+}
+
+.top-header h1 {
+    font-size: 28px;
+    font-weight: 650;
+
+    margin-bottom: 6px;
+}
+
+.top-header p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+
+/* ---------- HEADER ACTIONS ---------- */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.notification-btn {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+
+    border: 1px solid #263247;
+
+    background: #111827;
+
+    color: #f8fafc;
+
+    font-size: 17px;
+
+    transition: 0.2s;
+}
+
+.notification-btn:hover {
+    background: #172033;
+}
+
+
+/* ---------- PROFILE ---------- */
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #6366f1, #22d3ee);
+
+    font-weight: 700;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.profile-info strong {
+    font-size: 14px;
+}
+
+.profile-info span {
+    color: #64748b;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   DASHBOARD
+   ========================================= */
+
+.dashboard {
+    max-width: 1500px;
+    margin: auto;
+}
+
+
+/* =========================================
+   STATISTICS CARDS
+   ========================================= */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+}
+
+.stat-card {
+    background: #111827;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 15px;
+
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    transition: transform 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    border-color: #334155;
+}
+
+.stat-icon {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 12px;
+
+    background: #172033;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+.stat-card p {
+    color: #94a3b8;
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+.stat-card h2 {
+    font-size: 26px;
+
+    margin-bottom: 3px;
+}
+
+.stat-card span {
+    color: #22c55e;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   DASHBOARD GRID
+   ========================================= */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns: 1.7fr 1fr;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   DASHBOARD CARDS
+   ========================================= */
+
+.dashboard-card {
+    background: #111827;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 16px;
+
+    padding: 24px;
+}
+
+
+/* ---------- CARD HEADER ---------- */
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+.card-header h2 {
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+.card-header p {
+    color: #64748b;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.primary-btn {
+    border: none;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #4f46e5
+    );
+
+    color: white;
+
+    padding: 10px 15px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(99, 102, 241, 0.25);
+}
+
+.secondary-btn {
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 11px;
+
+    border-radius: 9px;
+
+    border: 1px solid #334155;
+
+    background: #172033;
+
+    color: #e2e8f0;
+
+    font-size: 12px;
+
+    transition: 0.2s;
+}
+
+.secondary-btn:hover {
+    background: #1e293b;
+}
+
+.view-btn {
+    border: none;
+
+    background: transparent;
+
+    color: #818cf8;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.view-btn:hover {
+    color: #a5b4fc;
+}
+
+.text-btn {
+    border: none;
+
+    background: transparent;
+
+    color: #818cf8;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   COMPETITORS
+   ========================================= */
+
+.competitor {
+    display: grid;
+
+    grid-template-columns:
+        42px
+        1fr
+        110px
+        100px
+        60px;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 15px 0;
+
+    border-top: 1px solid #1e293b;
+}
+
+.competitor-logo {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #172033;
+
+    color: #a5b4fc;
+
+    font-weight: 700;
+}
+
+.competitor-info h3 {
+    font-size: 13px;
+
+    margin-bottom: 3px;
+}
+
+.competitor-info p {
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+.monitoring-status {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: #86efac;
+
+    font-size: 11px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+}
+
+.last-check {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.last-check span {
+    color: #64748b;
+    font-size: 9px;
+}
+
+.last-check strong {
+    color: #cbd5e1;
+    font-size: 10px;
+}
+
+
+/* =========================================
+   AI INSIGHT
+   ========================================= */
+
+.ai-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(99, 102, 241, 0.12),
+            #111827 45%
+        );
+}
+
+.ai-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    background: rgba(34, 211, 238, 0.08);
+
+    filter: blur(30px);
+
+    top: -70px;
+    right: -50px;
+}
+
+.ai-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 24px;
+}
+
+.ai-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 11px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #22d3ee
+    );
+
+    font-size: 20px;
+}
+
+.ai-header h2 {
+    font-size: 17px;
+
+    margin-bottom: 3px;
+}
+
+.ai-header p {
+    color: #64748b;
+    font-size: 11px;
+}
+
+.ai-content h3 {
+    font-size: 14px;
+
+    margin-bottom: 9px;
+}
+
+.ai-content > p {
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin-bottom: 16px;
+}
+
+.insight-box {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    background: rgba(15, 23, 42, 0.7);
+
+    border: 1px solid #293548;
+
+    border-radius: 10px;
+
+    padding: 13px;
+
+    margin-bottom: 15px;
+}
+
+.insight-box strong {
+    color: #a5b4fc;
+
+    font-size: 12px;
+}
+
+.insight-box span {
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+.recommendation {
+    display: flex;
+
+    gap: 10px;
+
+    background: rgba(34, 197, 94, 0.06);
+
+    border: 1px solid rgba(34, 197, 94, 0.15);
+
+    padding: 12px;
+
+    border-radius: 10px;
+}
+
+.recommendation > span {
+    font-size: 16px;
+}
+
+.recommendation strong {
+    font-size: 11px;
+}
+
+.recommendation p {
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    margin-top: 4px;
+}
+
+
+/* =========================================
+   RECENT CHANGES
+   ========================================= */
+
+.changes-card {
+    margin-bottom: 20px;
+}
+
+.change-item {
+    display: grid;
+
+    grid-template-columns:
+        40px
+        1fr
+        70px
+        70px;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 14px 0;
+
+    border-top: 1px solid #1e293b;
+}
+
+.change-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+}
+
+.change-icon.danger {
+    background: rgba(239, 68, 68, 0.12);
+    color: #f87171;
+}
+
+.change-icon.warning {
+    background: rgba(245, 158, 11, 0.12);
+    color: #fbbf24;
+}
+
+.change-icon.info {
+    background: rgba(59, 130, 246, 0.12);
+    color: #60a5fa;
+}
+
+.change-info h3 {
+    font-size: 12px;
+
+    margin-bottom: 4px;
+}
+
+.change-info p {
+    color: #64748b;
+
+    font-size: 10px;
+}
+
+.priority {
+    padding: 5px 8px;
+
+    border-radius: 6px;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+.priority.high {
+    background: rgba(239, 68, 68, 0.12);
+    color: #f87171;
+}
+
+.priority.medium {
+    background: rgba(245, 158, 11, 0.12);
+    color: #fbbf24;
+}
+
+.priority.low {
+    background: rgba(59, 130, 246, 0.12);
+    color: #60a5fa;
+}
+
+.change-time {
+    color: #64748b;
+
+    font-size: 10px;
+
+    text-align: right;
+}
+
+
+/* =========================================
+   MONITORING BANNER
+   ========================================= */
+
+.monitoring-banner {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 17px 20px;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(34, 197, 94, 0.08),
+            rgba(15, 23, 42, 0.5)
+        );
+
+    border: 1px solid rgba(34, 197, 94, 0.15);
+}
+
+.monitoring-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.live-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(34, 197, 94, 0.1);
+
+    color: #4ade80;
+}
+
+.monitoring-left h3 {
+    font-size: 12px;
+
+    margin-bottom: 3px;
+}
+
+.monitoring-left p {
+    color: #64748b;
+
+    font-size: 10px;
+}
+
+.monitoring-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #86efac;
+
+    font-size: 11px;
+}
+
+.live-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow: 0 0 9px rgba(34, 197, 94, 0.7);
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .competitor {
+        grid-template-columns:
+            42px
+            1fr
+            100px
+            80px;
+    }
+
+    .competitor .view-btn {
+        display: none;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .sidebar {
+        width: 70px;
+
+        padding: 20px 10px;
+    }
+
+    .logo {
+        justify-content: center;
+        padding: 5px;
+    }
+
+    .logo-text,
+    .nav-item span:last-child,
+    .profile-info {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 70px;
+
+        width: calc(100% - 70px);
+
+        padding: 22px 18px;
+    }
+
+    .top-header h1 {
+        font-size: 22px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-avatar {
+        display: none;
+    }
+
+    .competitor {
+        grid-template-columns:
+            42px
+            1fr
+            90px;
+    }
+
+    .monitoring-status,
+    .last-check {
+        display: none;
+    }
+
+    .change-item {
+        grid-template-columns:
+            40px
+            1fr
+            60px;
+    }
+
+    .change-time {
+        display: none;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .main-content {
+        padding: 18px 12px;
+    }
+
+    .card-header {
+        align-items: flex-start;
+
+        gap: 12px;
+
+        flex-direction: column;
+    }
+
+    .primary-btn {
+        width: 100%;
+    }
+
+    .monitoring-banner {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+}
+/* =========================================
+   ADD COMPETITOR MODAL
+   ========================================= */
+
+.modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(2, 6, 23, 0.75);
+
+    backdrop-filter: blur(6px);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+
+    padding: 20px;
+}
+
+
+.competitor-modal {
+    width: 100%;
+    max-width: 440px;
+
+    background: #111827;
+
+    border: 1px solid #293548;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    position: relative;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45);
+
+    animation: modalAppear 0.2s ease;
+}
+
+
+@keyframes modalAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+.modal-close {
+    position: absolute;
+
+    top: 15px;
+    right: 17px;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    background: #172033;
+
+    color: #94a3b8;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+.modal-close:hover {
+    background: #263247;
+
+    color: white;
+}
+
+
+.modal-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #22d3ee
+        );
+
+    font-size: 22px;
+
+    margin-bottom: 18px;
+}
+
+
+.competitor-modal h2 {
+    font-size: 21px;
+
+    margin-bottom: 7px;
+}
+
+
+.modal-description {
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin-bottom: 22px;
+}
+
+
+.competitor-modal label {
+    display: block;
+
+    color: #cbd5e1;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+
+    margin-top: 15px;
+}
+
+
+.competitor-modal input,
+.competitor-modal select {
+
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border-radius: 9px;
+
+    border: 1px solid #293548;
+
+    background: #0f172a;
+
+    color: #f8fafc;
+
+    outline: none;
+
+    font-size: 12px;
+}
+
+
+.competitor-modal input:focus,
+.competitor-modal select:focus {
+
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.1);
+
+}
+
+
+.start-monitoring-btn {
+
+    width: 100%;
+
+    margin-top: 24px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #4f46e5
+        );
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.start-monitoring-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(99, 102, 241, 0.25);
+
+}
